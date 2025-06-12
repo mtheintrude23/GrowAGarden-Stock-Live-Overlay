@@ -4,6 +4,10 @@ Always-on draggable GrowAGarden stock overlay for any site.
 
 ---
 
+# WORK IN PROGRESS
+
+---
+
 ## Overview
 
 **GrowAGarden Stock Live Overlay** is a lightweight Chrome extension that adds a persistent, draggable overlay to any website or web app, displaying GrowAGarden stock information in real-time.
