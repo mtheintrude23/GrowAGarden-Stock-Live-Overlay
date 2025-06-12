@@ -1,4 +1,4 @@
-# GrowAGarden Stock Overlay Extension
+# GrowAGarden Stock Live Overlay
 
 A standalone always-on draggable GrowAGarden stock overlay that works across any website or app.
 
