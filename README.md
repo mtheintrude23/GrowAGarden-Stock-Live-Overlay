@@ -1,6 +1,6 @@
 # GrowAGarden Stock Overlay Extension
 
-Always-on draggable GrowAGarden stock overlay for any site.
+A standalone always-on draggable GrowAGarden stock overlay that works across any website or app.
 
 ---
 
@@ -10,33 +10,41 @@ Always-on draggable GrowAGarden stock overlay for any site.
 
 ## Overview
 
-**GrowAGarden Stock Live Overlay** is a lightweight Chrome extension that adds a persistent, draggable overlay to any website or web app, displaying GrowAGarden stock information in real-time.
-
+**GrowAGarden Stock Live Overlay** is a lightweight desktop application (built with Electron) that opens a persistent, draggable overlay window, displaying live GrowAGarden stock information. The overlay stays on top of other windows, allowing you to monitor stock data while using any website, web app, or desktop app.
 ---
 
 ## Features
 
 - 🟢 Always-on overlay
 - 🖱️ Fully draggable and repositionable
-- 🌐 Works on any website and web app (<all_urls>)
-- 📊 Live GrowAGarden stock data (handled by content.js)
-- 🎨 Custom styling (overlay.css)
+- 🌐 Works alongside any website, web app, or desktop application
+- 📊 Live GrowAGarden stock data
+- 🎨 Standalone Electron app
 
 ---
 
 ## Installation
 
-- Download the GrowAGarden Stock Live Overlay browser extension (see below).
-- Open your browser's Extensions page (chrome://extensions/).
-- Enable Developer mode (top right).
+- Download and install the GrowAGarden Stock Live Overlay application (release builds coming soon).
+- Launch the app — a new overlay window will open.
+- Move and position the overlay anywhere on your screen.
 - Click Load unpacked and select the extension folder.
-- Click the extension icon in your browser to toggle the overlay on any site!
+- The overlay remains on top while you browse or work in any other application.
 
 --- 
 
 ## Usage
 
-Once installed, simply browse any website or web app — the GrowAGarden stock overlay will automatically appear. You can drag and position the overlay anywhere on the screen for convenience.
+Run the app using:
+
+```bash
+npm install
+npm start
+```
+
+or build it for your platform using Electron Packager / Electron Builder.
+
+- The overlay window will stay on top of all other windows, allowing you to monitor GrowAGarden stocks while multitasking.
 
 ---
 
