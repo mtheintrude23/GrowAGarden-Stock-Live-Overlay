@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "GrowAGarden Stock Live Overlay",
+    "version": "1.0",
+    "description": "Always-on draggable GrowAGarden stock overlay for any site.",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["overlay.css"]
+      }
+    ],
+    "icons": {
+      "128": "icon128.png"
+    }
+  }
