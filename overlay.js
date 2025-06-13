@@ -3,6 +3,8 @@
 const API_URL = "https://api.joshlei.com/v2/growagarden/stock";
 const WS_URL = "wss://websocket.joshlei.com/growagarden/";
 
+let cachedData = {};
+
 const overlay = document.createElement("div");
 overlay.id = "gag-stock-overlay";
 overlay.style.position = "absolute";
@@ -29,6 +31,9 @@ overlay.style.zIndex = "999999";
 // Electron drag region
 overlay.style['-webkit-app-region'] = 'no-drag';
 overlay.style.boxSizing = "border-box";
+
+// Color
+overlay.style.color = "#fff";
 
 document.getElementById("gag-overlay-root").appendChild(overlay);
 
@@ -206,7 +211,8 @@ function fetchAndRenderStocks() {
   fetch(API_URL)
     .then(res => res.json())
     .then(data => {
-      renderStocks(data);
+      cachedData = data;
+      renderStocks(cachedData);
     })
     .catch((err) => {
       console.error('Failed to load stocks:', err);
@@ -246,8 +252,14 @@ fetchAndRenderStocks();
 const ws = new window.WebSocket(WS_URL);
 ws.onmessage = (event) => {
   try {
-    const data = JSON.parse(event.data);
-    renderStocks(data);
+    const updateData = JSON.parse(event.data);
+
+    // Merge incoming data into cachedData
+    Object.keys(updateData).forEach(key => {
+      cachedData[key] = updateData[key];
+    });
+
+    renderStocks(cachedData);
   } catch (err) {
     console.error('WebSocket message parse error:', err);
   }
