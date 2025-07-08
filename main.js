@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const open = require('open'); // Dùng để mở trình duyệt tự động
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 
 let isHidden = false;
 let isQuiting = false;
@@ -42,5 +42,4 @@ app.use(express.static(__dirname));
 app.listen(port, async () => {
   console.log(`🚀 Overlay server is running at http://localhost:${port}`);
   console.log(`💡 Use /hide, /show, /quit to simulate Electron behavior`);
-  await open(`http://localhost:${port}`); // Tự động mở trình duyệt như Electron load window
 });
