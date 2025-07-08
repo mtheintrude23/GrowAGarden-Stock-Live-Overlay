@@ -4,7 +4,7 @@
     "main": "main.js",
     "description": "Always-on-top GrowAGarden Stock Live overlay",
     "scripts": {
-      "start": "electron ."
+      "start": "node main.js"
     },
     "dependencies": {
       "electron": "^29.0.0"
